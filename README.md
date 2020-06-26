@@ -108,6 +108,21 @@ Following are the list of hyper-parameter values that we have used while trainin
 | 10.   | `show_every_n_batches` | number of batches at which the <br>neural network should print progress | 500                 |
 
 
+# Results and Discussion
+
+We need to feed the model a *prime word* on the basis of which the model then generates the talking points. For example - <br>
+
+Upon feeding the model the word "corona", the model generates the following talking points - 
+
+```
+corona. m. est
+** the dollar slipped 0. 2 percent to 3. 5 percent.
+in the past decade, the dow jones industrial average was up 0. 2 percent at $1, 326. 00 a barrel.
+a weaker u. s. dollar slipped from a basket of major currencies in 2018.
+the dow jones industrial average index was down 0. 3 percent to the lowest level in the past five months, ” the official said.
+the ministry is not immediately available to comment
+
+```
 
 
 
