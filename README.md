@@ -1,14 +1,33 @@
 # Talking-points-global-hackathon
 
+- [Problem Description](#problem-description)
+- [Data Source & Description](#data-source---description)
+    + [Context](#context)
+    + [Content](#content)
+- [Deep Learning Algorithm for Talking Points](#deep-learning-algorithm-for-talking-points)
+  * [Implement pre-processing functions](#implement-pre-processing-functions)
+    + [Word-Embedding](#word-embedding)
+    + [Word2vec Model](#word2vec-model)
+- [Build the Neural Network](#build-the-neural-network)
+  * [The Neural Network](#the-neural-network)
+  * [Model Training ](#time-to-train)
+  * [Hyper-parameter Tuning](#hyper-parameter-tuning)
+- [Results and Discussion](#results-and-discussion)
+- [Future Improvements](#future-improvements)
+
+
+
+
+
+
 # Problem Description
 
 # Data Source & Description
 
-# Source
+## Description:
 
 We have gathered the data for training our model from Kaggle's dataset [US Financial News Articles](https://www.kaggle.com/jeet2016/us-financial-news-articles?)
 
-## Description:
 
 ### Context
 
@@ -30,15 +49,11 @@ The source for the articles (Archive source: httsps://Webhose.io/archive )
 
 # Deep Learning Algorithm for Talking Points
 
-The deep-learning algorithm is implemented using [Pytorch](https://pytorch.org).
+The deep-learning algorithm is implemented in Python using [Pytorch](https://pytorch.org) library.
 
-## Step 1: Get the data
+## Implement pre-processing functions
 
-We have unzipped ---> # TODO
-
-## Step 2: Implement pre-processing functions
-
-### What is word-embedding?
+### Word-Embedding
 
 Word embedding is a collective term for models that learn to map a set of words or phrases in a vocabulary to vectors of numerical values. These vectors are called embeddings. We can use neural network to learn word-embeddings.<br><br>
 
