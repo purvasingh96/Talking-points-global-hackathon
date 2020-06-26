@@ -125,7 +125,14 @@ the ministry is not immediately available to comment
 ```
 
 
+# Future Improvements 
 
+We need to address the following points for better model accuracy - 
+
+1. Better data-set related to stock news
+2. Traning on large volumes of data.
+3. Training for larger epochs
+4. Exploring BiLSTM
 
 
 
