@@ -6,30 +6,27 @@
 
 # Source
 
-We have gathered the data for training our model from Kaggle's dataset [Daily News for Stock Market Prediction](https://www.kaggle.com/aaron7sun/stocknews)
+We have gathered the data for training our model from Kaggle's dataset [US Financial News Articles](https://www.kaggle.com/jeet2016/us-financial-news-articles?)
 
 ## Description:
 
-### Data
-There are two channels of data provided in this dataset:
+### Context
 
-**1. News data:** The data-set owner has crawled historical news headlines from Reddit WorldNews Channel (/r/worldnews). They are ranked by reddit users' votes, and only the top 25 headlines are considered for a single date.
+The data set is rich with metadata, containing the source of the article, the time it was published to the author details and Images related to every article. 
+Excellent for text analysis and combined with any other related entity dataset, it could give some astounding results.
 
-**2. Stock data:** Dow Jones Industrial Average (DJIA) is used to "prove the concept".
+### Content
 
-### Tables 
+The main Zip file contains 5 other folders , each for every month in 2018 from January to May.
 
-*RedditNews.csv:* two columns
-The first column is the "date", and second column is the "news headlines".
-All news are ranked from top to bottom based on how hot they are.
-Hence, there are 25 lines for each date.
+JSON files have articles based on the following criteria:
 
-*DJIA_table.csv:* 
-Downloaded directly from Yahoo Finance: check out the web page for more info.
+News publishers: Bloomberg.com, CNBC.com, reuters.com, wsj.com, fortune.com
+Language: Only English
+Country: United States
+News Category: Financial news only
 
-*CombinedNewsDJIA.csv:*
-To make things easier for my students, I provide this combined dataset with 27 columns.
-The first column is "Date", the second is "Label", and the following ones are news headlines ranging from "Top1" to "Top25".
+The source for the articles (Archive source: httsps://Webhose.io/archive )
 
 # Deep Learning Algorithm for Talking Points
 
@@ -41,71 +38,14 @@ We have unzipped ---> # TODO
 
 ## Step 2: Implement pre-processing functions
 
-Here, we implement thw following 2 pre-processing functions - 
+### What is word-embedding?
 
-1. Look-up Table
-2. Tokenize Punctuation
+Word embedding is a collective term for models that learn to map a set of words or phrases in a vocabulary to vectors of numerical values. These vectors are called embeddings. We can use neural network to learn word-embeddings.<br><br>
 
-### Look-up Table
-To create a word embedding, we first need to transform the words to ids. In this function, we have create two dictionaries:<br>
+<img src="./assets/Screenshot 2020-06-26 at 11.22.50 AM.png"></img>
 
-1. Dictionary to go from the words to an id, we'll call `vocab_to_int`
-2. Dictionary to go from the id to word, we'll call `int_to_vocab`
-
-Return these dictionaries in the following tuple `(vocab_to_int, int_to_vocab)`
-
-
-### Tokenize Punctuation
-
-We'll be splitting the stock news into a word array using spaces as delimiters. However, punctuations like periods and exclamation marks can create multiple ids for the same word. For example, "rise" and "rise!" would generate two different word ids.<br><br>
-The function `token_lookup` returns a dict that will be used to tokenize symbols like "!" into "||Exclamation_Mark||". Some more examples are described below-<br><br>
-Period ( . )<br>
-Comma ( , )<br>
-Quotation Mark ( " )<br>
-Semicolon ( ; )<br>
-Exclamation mark ( ! )<br>
-Question mark ( ? )<br>
-Left Parentheses ( ( )<br>
-Right Parentheses ( ) )<br>
-Dash ( - )<br>
-Return ( \n )<br><br>
-This dictionary will be used to tokenize the symbols and add the delimiter (space) around it. This separates each symbols as its own word, making it easier for the neural network to predict the next word. 
 
 # Build the Neural Network
-
-## Input
-Let's start with the preprocessed input data. We'll use [TensorDataset](http://pytorch.org/docs/master/data.html#torch.utils.data.TensorDataset) to provide a known format to our dataset; in combination with [DataLoader](http://pytorch.org/docs/master/data.html#torch.utils.data.DataLoader), it will handle batching, shuffling, and other dataset iteration functions.
-
-We have created data with TensorDataset by passing in feature and target tensors. Then created a DataLoader as usual.
-```
-data = TensorDataset(feature_tensors, target_tensors)
-data_loader = torch.utils.data.DataLoader(data, 
-                                          batch_size=batch_size)
-```
-
-## Batching
-We have batched `words` data into chunks of size `batch_size` using the `TensorDataset` and `DataLoader` classes.<br>
-
-For example, say we have these as input:<br>
-```
-words = [1, 2, 3, 4, 5, 6, 7]
-sequence_length = 4
-```
-
-Our first `feature_tensor` contains the values:<br>
-```
-[1, 2, 3, 4]
-```
-And the corresponding `target_tensor` is just the next "word"/tokenized word value:<br>
-```
-5
-```
-This continues with the second `feature_tensor`, `target_tensor` being:<br>
-```
-[2, 3, 4, 5]  # features
-6             # target
-```
----
 ## The Neural Network
 We have implemented an RNN using PyTorch's [Module class](http://pytorch.org/docs/master/nn.html#torch.nn.Module) along with LSTM. The following functions completed our RNN model -<br>
  - `__init__` - The initialize function. 
