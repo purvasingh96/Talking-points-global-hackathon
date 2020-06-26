@@ -42,7 +42,19 @@ We have unzipped ---> # TODO
 
 Word embedding is a collective term for models that learn to map a set of words or phrases in a vocabulary to vectors of numerical values. These vectors are called embeddings. We can use neural network to learn word-embeddings.<br><br>
 
-<img src="./assets/Screenshot 2020-06-26 at 11.22.50 AM.png"></img>
+For example, lets say the word "stock" is encoded as the integer "958", then to get hidden-layer values for "stock", we just take 958th row of the embeddng weight matrix. This process is known as **Embedding Look-up.** 
+
+<img src="./assets/embedding_lookup_table.png" width="50%" height="50%"></img>
+
+
+### Word2vec Model
+
+The Word2Vec algorithm finds much more efficient representations by finding vectors that represent the words. These vectors also contain semantic information about the words. For example consider the below excerts from BBC on impact Corona pandemic on US economy-<br>
+
+> "Investors fear the spread of the **corona pandemic** will **destroy economic growth.**"
+> "More than 30m people have been **unemployeed** due to the **corona pandemic.** "
+> "**Oil prices have crashed** since demand for oil has dried up as **corona pandemic lockdown** across the world have kept people inside."
+
 
 
 # Build the Neural Network
