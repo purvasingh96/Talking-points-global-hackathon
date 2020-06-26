@@ -151,7 +151,13 @@ We need to address the following points for better model accuracy -
 
 
 
+# TODO
 
+1. change word limit to 140 words
+2. More than 1 prime word
+3. Explore BERT
+4. Add sentiment analysis
+5. Convert agenda to CSV file.
 
 
 
