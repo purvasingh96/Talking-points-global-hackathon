@@ -113,8 +113,12 @@ We have implemented an RNN using PyTorch's [Module class](http://pytorch.org/doc
  - `forward` - Forward propagation function.
  
 
-**The output of this model is the *last* batch of word scores** after a complete sequence has been processed. That is, for each input sequence of words, we only want to output the word scores for a single, most likely, next word.
+**The output of this model is the *last* batch of word scores** after a complete sequence has been processed. That is, for each input sequence of words, we only want to output the word scores for a single, most likely, next word.<br><br>
 
+Our neural network architerure is better depicted below - <br>
+
+<img src="./assets/charRNN.png"></img>
+<br>
 
 
 
