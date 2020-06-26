@@ -51,9 +51,14 @@ For example, lets say the word "stock" is encoded as the integer "958", then to 
 
 The Word2Vec algorithm finds much more efficient representations by finding vectors that represent the words. These vectors also contain semantic information about the words. For example consider the below excerts from BBC on impact Corona pandemic on US economy-<br>
 
-> "Investors fear the spread of the **corona pandemic** will **destroy economic growth.**"
-> "More than 30m people have been **unemployeed** due to the **corona pandemic.** "
-> "**Oil prices have crashed** since demand for oil has dried up as **corona pandemic lockdown** across the world have kept people inside."
+> "Investors fear the spread of the **corona pandemic** will **destroy economic growth.**"<br>
+> "More than 30m people have been **unemployeed** due to the **corona pandemic.** "<br>
+> "**Oil prices have crashed** since demand for oil has dried up as **corona pandemic lockdown** across the world have kept people inside."<br>
+
+Words that show up in similar contexts, such as "destroy economic growth", "unemployeed", and "oil prices have crashed" will have vectors near each other. Different words will be further away from one another, and relationships can be represented by distance in vector space. An example is shown below - <br>
+
+
+<img src="./assets/vector_distance.png"></img>
 
 
 
