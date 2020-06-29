@@ -139,6 +139,19 @@ the ministry is not immediately available to comment
 
 ```
 
+# Sentiment Analysis on Stock Data
+
+Sentiment analysis on stock data can be added to one's advantage. If you look for an extreme example of how social media influences stock market, take a look at Kylie Jenners’ tweet about Snapchat. <br>
+
+<img src="./assets/kylie_tweet.png"></img>
+
+Shortly after the message was posted online, the price of Snap, Snapchat parent company, fell by 8.5 percent.
+
+
+# Converting the final result into CSV file
+
+After generating the talking points and predicting the sentiment, we save the entire result to a csv file so that it can be called from an API.
+
 
 # Future Improvements 
 
@@ -148,16 +161,3 @@ We need to address the following points for better model accuracy -
 2. Traning on large volumes of data.
 3. Training for larger epochs
 4. Exploring BiLSTM
-
-
-
-# TODO
-
-1. change word limit to 140 words
-2. More than 1 prime word
-3. Explore BERT
-4. Add sentiment analysis
-5. Convert agenda to CSV file.
-
-
-
