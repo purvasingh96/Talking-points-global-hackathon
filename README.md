@@ -12,9 +12,10 @@
   * [The Neural Network](#the-neural-network)
   * [Model Training ](#time-to-train)
   * [Hyper-parameter Tuning](#hyper-parameter-tuning)
-- [Results and Discussion](#results-and-discussion)
-- [Future Improvements](#future-improvements)
-
+- [Generated Talking Points](#Generated-Talking-Points)
+- [Sentiment Analysis on Stock Data](#Sentiment-Analysis-on-Stock-Data)
+- [Converting the final result into CSV file](#Converting-the-final-result-into-CSV-file)
+- [Future Improvements](#Future-Improvements)
 
 
 
@@ -123,7 +124,7 @@ Following are the list of hyper-parameter values that we have used while trainin
 | 10.   | `show_every_n_batches` | number of batches at which the <br>neural network should print progress | 500                 |
 
 
-# Results and Discussion
+# Generated Talking Points
 
 We need to feed the model a *prime word* on the basis of which the model then generates the talking points. For example - <br>
 
@@ -143,7 +144,7 @@ the ministry is not immediately available to comment
 
 Sentiment analysis on stock data can be added to one's advantage. If you look for an extreme example of how social media influences stock market, take a look at Kylie Jenners’ tweet about Snapchat. <br>
 
-<img src="./assets/kylie_tweet.png"></img>
+<img src="./assets/kylie_tweet.png" height="50%" width="50%"></img>
 
 Shortly after the message was posted online, the price of Snap, Snapchat parent company, fell by 8.5 percent.
 
